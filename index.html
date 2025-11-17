@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio — Marcus Carvalho</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">MC</div>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#formacao">Formação</a>
+            <a href="#skills">Habilidades</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1 id="nome"></h1>
+            <p id="resumo"></p>
+            <button onclick="document.querySelector('#contato').scrollIntoView({behavior:'smooth'})">Entrar em Contato</button>
+        </div>
+        <div class="hero-photo">
+            <div class="avatar">MC</div>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <section id="sobre" class="card">
+            <h2>Sobre mim</h2>
+            <p id="sobreTexto"></p>
+        </section>
+
+        <section id="formacao" class="card">
+            <h2>Formação Acadêmica</h2>
+            <ul id="listaFormacao"></ul>
+        </section>
+
+        <section id="skills" class="card">
+            <h2>Habilidades</h2>
+            <div id="listaSkills" class="skills-grid"></div>
+        </section>
+
+        <section id="contato" class="card">
+            <h2>Contato</h2>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Telefone:</strong> <span id="telefone"></span></p>
+            <p><strong>LinkedIn:</strong> <a id="linkedin" target="_blank"></a></p>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2025 — Desenvolvido por Marcus Carvalho
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
