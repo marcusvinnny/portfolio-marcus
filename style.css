@@ -18,6 +18,7 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px 40px;
     background: #0f131a;
     position: sticky;
@@ -44,22 +45,35 @@ nav a:hover {
     color: var(--accent);
 }
 
-/* HERO */
+/* HERO (CORRIGIDO) */
 .hero {
-    padding: 60px 40px;
+    padding: 80px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    gap: 60px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.hero-text {
+    flex: 1;
 }
 
 .hero-text h1 {
-    font-size: 40px;
+    font-size: 46px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    color: var(--muted);
+    max-width: 500px;
+    line-height: 1.6;
 }
 
 .hero-text button {
-    margin-top: 18px;
-    padding: 12px 18px;
+    margin-top: 25px;
+    padding: 12px 20px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
@@ -67,15 +81,22 @@ nav a:hover {
     background: linear-gradient(135deg, #6ee7b7, #4cc9f0);
 }
 
+.hero-photo {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 200px;
+}
+
 .avatar {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     border-radius: 22px;
     background: #1d2433;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 48px;
+    color: #fff;
 }
 
 /* CONTAINER & CARDS */
@@ -110,8 +131,26 @@ footer {
     color: var(--muted);
 }
 
-/* RESPONSIVE */
-@media (max-width: 800px) {
-    .hero { flex-direction: column; text-align: center; }
-    nav { display: none; }
+/* RESPONSIVIDADE */
+@media (max-width: 850px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+        font-size: 38px;
+    }
+    
+    nav {
+        display: none;
+    }
 }
+
